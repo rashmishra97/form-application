@@ -63,7 +63,6 @@ button:hover {
   background-color: #125aa0;
 }
 
-/* ===== USERS GRID ===== */
 
 #usersContainer {
   display: grid;
@@ -72,7 +71,6 @@ button:hover {
   margin-top: 20px;
 }
 
-/* ===== USER CARD ===== */
 
 .user-box {
   background-color: #f9fafb;
