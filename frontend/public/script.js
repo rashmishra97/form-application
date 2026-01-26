@@ -11,7 +11,7 @@ if (form) {
       contact: document.getElementById('contact').value
     };
 
-    await fetch('http://localhost:5000/submit', {
+    await fetch('http://backend:5000/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -24,7 +24,7 @@ if (form) {
 }
 
 async function fetchUsers() {
-  const response = await fetch('http://localhost:5000/users');
+  const response = await fetch('http://backend:5000/users');
   const users = await response.json();
 
   const container = document.getElementById('usersContainer');
