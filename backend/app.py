@@ -16,9 +16,17 @@ def submit_form():
         "message": "Data Successfully Saved"
     }), 201
 
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({
+        "status": "Backend is running"
+    }), 200
+
+
 @app.route('/users', methods=['GET'])
 def get_users():
     return jsonify(users), 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
