@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  backend:
+    image: form-backend
+    container_name: form-backend
+    ports:
+      - "5000:5000"
+    networks:
+      - form-network
+
+  frontend:
+    image: form-frontend
+    container_name: form-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - form-network
+
+networks:
+  form-network:
+    driver: bridge
