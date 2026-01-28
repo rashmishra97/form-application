@@ -21,7 +21,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 WORKDIR /app
 COPY --from=build /app /app
 
-EXPOSE 80
+EXPOSE 3000
 
 # Start both Express and Nginx
 CMD ["sh", "-c", "node server.js & nginx -g 'daemon off;'"]
