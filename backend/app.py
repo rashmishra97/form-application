@@ -7,7 +7,7 @@ CORS(app)
 # In-memory storage (temporary)
 users = []
 
-@app.route('/submit', methods=['POST'])
+@app.route('/api/submit', methods=['POST'])
 def submit_form():
     data = request.json
     users.append(data)
