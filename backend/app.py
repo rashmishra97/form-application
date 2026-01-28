@@ -24,7 +24,7 @@ def health():
     }), 200
 
 
-@app.route('api/users', methods=['GET'])
+@app.route('/api/users', methods=['GET'])
 def get_users():
     return jsonify(users), 200
 
